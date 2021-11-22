@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD  HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>403 Forbidden</title>
+</head>
+<style type="text/css">
+  .visu {
+    border: 1px solid #C0C0C0;
+    color: #FFFFFF;
+    position: relative;
+    min-width: 13em;
+    max-width: 52em;
+    margin: 4em auto;
+    border-radius: 10px;
+    padding: 3em;
+    -moz-padding-start: 30px;
+    background-color: #8b0000;
+  }
+  
+  .visu h2,
+  .visu h3,
+  .visu h4 .visu body {
+    font-size: 130%;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+  }
+  
+  body {
+    background-color: #353535;
+    font-family: sans-serif;
+  }
+  
+  a:link {
+    color: #ffffff;
+  }
+  
+  a:visited {
+    color: #ffff00;
+  }
+</style>
+
+<body>
+  <div class="visu">
+    <h2 style="text-align: center;" id="message">Access denied to this site.</h2>
+    <div style="float:right;">Powered by <a href="https://www.urlfilterdb.com/">ufdbGuard</a></div>
+  </div>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var message = {
+        "it": "L'accesso a questo sito è bloccato.",
+        "en": "Access denied to this site.",
+        "es": "El acceso a este sitio está bloqueado.",
+        "fr": "L'accès à ce site est bloqué.",
+        "de": "Der Zugang zu dieser Website ist blockiert."
+      };
+      var userLang = navigator.language || navigator.userLanguage;
+      var text = message[userLang.substring(0, 2)];
+      text != null ? document.getElementById("message").textContent = text : document.getElementById("message").textContent =
+        message["en"];
+    });
+  </script>
+</body>
+
+</html>
